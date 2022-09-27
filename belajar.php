@@ -1,6 +1,6 @@
 <?php
-$numbers = [3, 4, 1, 65, 32, 6, 21, 100, 200, 300];
-$numbers[] = 22;
+$numbers = [1, 2, 3, 4, 5];
+$numbers[] = 6;
 ?>
 <?php $students = [
     ["Raup", "12345", "TKJ", "raup@gmail.com"], 
@@ -25,7 +25,12 @@ $numbers[] = 22;
             line-height: 50px;
             margin: 3px;
             float: left;
+            transition: 1s;
 
+        }
+        .kotak:hover {
+            transform: rotate(360deg);
+            border-radius: 50%;
         }
 
         .clear {
