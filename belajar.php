@@ -3,10 +3,20 @@ $numbers = [1, 2, 3, 4, 5];
 $numbers[] = 6;
 ?>
 <?php $students = [
-    ["Raup", "12345", "TKJ", "raup@gmail.com"], 
-    ["Ghani", "12345", "TKJ", "ghani@gmail.com"]
-    
-    ]; ?>
+    [
+        "nama" => "Raup",
+        "nim" => "12345",
+        "jurusan" => "TKJ",
+        "email" => "raup@gmail.com"
+    ],
+    [
+        "nama" => "Ghani",
+        "nim" => "12345",
+        "jurusan" => "TKJ",
+        "email" => "ghani@gmail.com"
+    ]
+
+]; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +38,7 @@ $numbers[] = 6;
             transition: 1s;
 
         }
+
         .kotak:hover {
             transform: rotate(360deg);
             border-radius: 50%;
@@ -68,15 +79,15 @@ $numbers[] = 6;
     <h4>List Students</h4>
     <?php foreach ($students as $student) : ?>
         <ul>
-            <li>Nama :<?php echo $student[0]; ?></li>
-            <li>NIM :<?php echo $student[1]; ?></li>
-            <li>Jurusan :<?php echo $student[2]; ?></li>
-            <li>Email :<?php echo $student[3]; ?></li>
+            <li>Nama :<?php echo $student["nama"]; ?></li>
+            <li>NIM :<?php echo $student["nim"]; ?></li>
+            <li>Jurusan :<?php echo $student["jurusan"]; ?></li>
+            <li>Email :<?php echo $student["email"]; ?></li>
         </ul>
     <?php endforeach; ?>
 
 
-    
+
 
 
 </body>
